@@ -1,0 +1,1243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-W93DZHMG');</script>
+    <!-- End Google Tag Manager -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+  <link rel="apple-touch-icon" href="images/favicon.png" />
+  <title>Trackmate, Courier Tracking Sri Lanka | Domex, TransExpress, Koombiyo, Royal Express</title>
+  <meta name="description" content="Trackmate, free courier tracking Sri Lanka. Real-time updates for Domex, TransExpress, Koombiyo, Royal Express, FDE and all major couriers. Track all packages in one place." />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    /* ── TRACKMATE TOKENS ─────────────────────────────────── */
+    :root {
+      --tm-orange:     #f97316;
+      --tm-orange-dk:  #ea580c;
+      --tm-orange-lt:  #fff7ed;
+      --tm-orange-mid: #fed7aa;
+      --tm-dark:       #1c1917;
+      --tm-gray:       #78716c;
+      --tm-light:      #fef9f6;
+    }
+
+    /* ── SITE HEADER OVERRIDE, Trackmate nav CTA ─────────── */
+    .tm-nav-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 22px;
+      background: linear-gradient(135deg, var(--tm-orange), var(--tm-orange-dk));
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.9rem;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 14px rgba(249,115,22,0.3);
+    }
+    .tm-nav-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(249,115,22,0.4);
+    }
+    /* mobile: CTA moves to the bottom of the open menu, not the top bar */
+    @media (max-width: 760px) {
+      .tm-nav-cta {
+        display: none;
+        order: 4;
+        flex-basis: 100%;
+        width: auto;
+        justify-content: center;
+        margin: 8px 16px 2px;
+      }
+      .header-inner:has(.site-nav.nav-open) .tm-nav-cta { display: inline-flex; }
+    }
+
+    /* ── HERO ─────────────────────────────────────────────── */
+    .tm-hero {
+      background: #ffffff;
+      padding: 80px 0 88px;
+      overflow: hidden;
+      position: relative;
+    }
+    /* warm decorative circles */
+    .tm-hero::before {
+      content: '';
+      position: absolute;
+      width: 600px; height: 600px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(249,115,22,0.08) 0%, transparent 70%);
+      top: -100px; right: -100px;
+      pointer-events: none;
+    }
+    .tm-hero::after {
+      content: '';
+      position: absolute;
+      width: 400px; height: 400px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(249,115,22,0.05) 0%, transparent 70%);
+      bottom: 0; left: -80px;
+      pointer-events: none;
+    }
+    .tm-hero-inner {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+    .tm-hero-copy {
+      padding-bottom: 0;
+    }
+    .tm-hero-brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 36px;
+    }
+    .tm-hero-brand img {
+      height: 84px;
+      width: auto;
+    }
+    .tm-tagline-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: var(--tm-orange-lt);
+      border: 1px solid var(--tm-orange-mid);
+      border-radius: 999px;
+      padding: 5px 14px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--tm-orange-dk);
+    }
+    .tm-tagline-pill::before {
+      content: '';
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--tm-orange);
+      flex-shrink: 0;
+      animation: tm-blink 2s ease-in-out infinite;
+    }
+    @keyframes tm-blink {
+      0%,100% { opacity:1; } 50% { opacity:0.3; }
+    }
+    .tm-hero h1 {
+      font-size: clamp(2.8rem, 5vw, 4.4rem);
+      font-weight: 800;
+      line-height: 1.07;
+      letter-spacing: -0.03em;
+      color: var(--tm-dark);
+      margin-bottom: 20px;
+    }
+    .tm-hero h1 em {
+      font-style: normal;
+      color: var(--tm-orange);
+    }
+    .tm-hero-sub {
+      font-size: 1.1rem;
+      color: var(--tm-gray);
+      line-height: 1.75;
+      max-width: 440px;
+      margin-bottom: 40px;
+    }
+    /* App store buttons */
+    .tm-store-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 24px;
+    }
+    .tm-store-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 11px 20px;
+      border-radius: 12px;
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+      border: 1.5px solid;
+    }
+    .tm-store-btn:hover { transform: translateY(-2px); }
+    .tm-store-btn--play {
+      background: var(--tm-dark);
+      border-color: var(--tm-dark);
+      color: #fff;
+    }
+    .tm-store-btn--play:hover { box-shadow: 0 8px 24px rgba(28,25,23,0.25); }
+    .tm-store-btn--apple {
+      background: #fff;
+      border-color: #e2e8f0;
+      color: var(--tm-dark);
+    }
+    .tm-store-btn--apple:hover { box-shadow: 0 8px 24px rgba(0,0,0,0.1); border-color: var(--tm-orange-mid); }
+    .tm-store-btn-sub  { font-size: 0.62rem; opacity: 0.6; display: block; }
+    .tm-store-btn-name { font-size: 0.95rem; font-weight: 700; display: block; }
+    .tm-hero-note {
+      font-size: 0.78rem;
+      color: #aaa;
+    }
+
+    /* Hero visual, floating phone mockup */
+    .tm-hero-visual {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .tm-hero-mockup {
+      width: 100%;
+      max-width: 460px;
+      display: block;
+      filter: drop-shadow(0 24px 56px rgba(249,115,22,0.18)) drop-shadow(0 8px 24px rgba(0,0,0,0.12));
+      transition: transform 0.4s ease;
+    }
+    .tm-hero-mockup:hover { transform: translateY(-8px); }
+
+    /* ── TRACKING SEARCH BAR ──────────────────────────────── */
+    .tm-search-wrap {
+      margin-top: 32px;
+      margin-bottom: 10px;
+    }
+    .tm-search-form {
+      display: flex;
+      gap: 0;
+      max-width: 440px;
+      background: #fff;
+      border: 2px solid #e2e8f0;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .tm-search-form:focus-within {
+      border-color: var(--tm-orange);
+      box-shadow: 0 4px 24px rgba(249,115,22,0.18);
+    }
+    .tm-search-input {
+      flex: 1;
+      padding: 13px 16px;
+      border: none;
+      outline: none;
+      font-family: inherit;
+      font-size: 0.9rem;
+      color: var(--tm-dark);
+      background: transparent;
+    }
+    .tm-search-input::placeholder { color: #aaa; }
+    .tm-search-btn {
+      padding: 12px 18px;
+      background: linear-gradient(135deg, var(--tm-orange), var(--tm-orange-dk));
+      border: none;
+      cursor: pointer;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: opacity 0.2s;
+      flex-shrink: 0;
+    }
+    .tm-search-btn:hover { opacity: 0.9; }
+    .tm-search-hint {
+      font-size: 0.72rem;
+      color: #bbb;
+      margin-top: 8px;
+    }
+
+    /* ── COURIER STRIP ────────────────────────────────────── */
+    .tm-couriers {
+      background: var(--tm-light);
+      border-top: 1px solid #f0e8e0;
+      border-bottom: 1px solid #f0e8e0;
+      padding: 40px 0;
+    }
+    .tm-couriers-label {
+      text-align: center;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--tm-gray);
+      margin-bottom: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+    }
+    .tm-couriers-label::before,
+    .tm-couriers-label::after {
+      content: '';
+      flex: 1;
+      max-width: 120px;
+      height: 1px;
+      background: var(--tm-orange-mid);
+    }
+    .tm-courier-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 12px;
+    }
+    .tm-courier-card {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #fff;
+      border: 1px solid #f0e8e0;
+      border-radius: 14px;
+      padding: 18px 12px;
+      min-height: 80px;
+      transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+    }
+    .tm-courier-card:hover {
+      border-color: var(--tm-orange-mid);
+      box-shadow: 0 4px 16px rgba(249,115,22,0.1);
+      transform: translateY(-2px);
+    }
+    .tm-courier-logo {
+      height: 32px;
+      width: auto;
+      max-width: 90px;
+      object-fit: contain;
+    }
+
+    /* ── APP MOCKUP SECTION ───────────────────────────────── */
+    .tm-app-section {
+      padding: 96px 0;
+      background: #fff;
+    }
+    .tm-app-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 72px;
+      align-items: center;
+    }
+    .tm-app-mockup {
+      position: relative;
+      display: flex;
+      justify-content: center;
+    }
+    .tm-app-mockup img {
+      width: 100%;
+      max-width: 380px;
+      display: block;
+      filter: drop-shadow(0 24px 56px rgba(249,115,22,0.15)) drop-shadow(0 8px 24px rgba(0,0,0,0.1));
+      transition: transform 0.4s ease;
+    }
+    .tm-app-mockup:hover img { transform: translateY(-8px); }
+    .tm-app-copy-label {
+      font-size: 0.62rem;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--tm-orange);
+      margin-bottom: 12px;
+    }
+    .tm-app-copy h3 {
+      font-size: clamp(1.8rem, 3vw, 2.4rem);
+      font-weight: 800;
+      color: var(--tm-dark);
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin-bottom: 14px;
+    }
+    .tm-app-copy h3 em { font-style: normal; color: var(--tm-orange); }
+    .tm-app-copy p {
+      font-size: 0.97rem;
+      color: var(--tm-gray);
+      line-height: 1.8;
+      margin-bottom: 28px;
+    }
+    .tm-app-dl-row {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .tm-app-dl-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 11px 20px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-family: inherit;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .tm-app-dl-btn:hover { transform: translateY(-2px); }
+    .tm-app-dl-btn--dark {
+      background: var(--tm-dark);
+      color: #fff;
+      box-shadow: 0 4px 14px rgba(28,25,23,0.2);
+    }
+    .tm-app-dl-btn--dark:hover { box-shadow: 0 8px 24px rgba(28,25,23,0.3); }
+    .tm-app-dl-btn--orange {
+      background: linear-gradient(135deg, var(--tm-orange), var(--tm-orange-dk));
+      color: #fff;
+      box-shadow: 0 4px 14px rgba(249,115,22,0.3);
+    }
+    .tm-app-dl-btn--orange:hover { box-shadow: 0 8px 24px rgba(249,115,22,0.4); }
+    .tm-app-dl-sub  { font-size: 0.62rem; opacity: 0.65; display: block; }
+    .tm-app-dl-name { font-size: 0.9rem; font-weight: 700; display: block; }
+
+    /* ── SHARED ───────────────────────────────────────────── */
+    .tm-eyebrow {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--tm-orange);
+      margin-bottom: 12px;
+    }
+    .tm-h2 {
+      font-size: clamp(2rem, 3.5vw, 2.9rem);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      color: var(--tm-dark);
+      margin-bottom: 16px;
+    }
+    .tm-h2 em { font-style: normal; color: var(--tm-orange); }
+    .tm-h2--white { color: #fff; }
+    .tm-sub {
+      font-size: 1rem;
+      color: var(--tm-gray);
+      line-height: 1.75;
+      max-width: 540px;
+    }
+    .tm-sub--muted { color: rgba(255,255,255,0.6); }
+
+    /* ── REVEAL ───────────────────────────────────────────── */
+    .tm-reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .tm-reveal.tm-visible { opacity: 1; transform: translateY(0); }
+    .tm-d1 { transition-delay: 0.06s; }
+    .tm-d2 { transition-delay: 0.14s; }
+    .tm-d3 { transition-delay: 0.22s; }
+
+    /* ── HOW IT WORKS ─────────────────────────────────────── */
+    .tm-how {
+      padding: 96px 0;
+      background: #fff;
+    }
+    .tm-steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      background: #f0e8e0;
+      border-radius: 24px;
+      overflow: hidden;
+      margin-top: 56px;
+    }
+    .tm-step {
+      background: #fff;
+      padding: 44px 36px;
+      position: relative;
+    }
+    .tm-step::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--tm-orange), var(--tm-orange-dk));
+    }
+    .tm-step-num {
+      font-size: 3.8rem;
+      font-weight: 900;
+      letter-spacing: -0.06em;
+      line-height: 1;
+      color: rgba(249,115,22,0.08);
+      margin-bottom: 20px;
+    }
+    .tm-step-icon {
+      width: 52px; height: 52px;
+      border-radius: 14px;
+      background: var(--tm-orange-lt);
+      border: 1px solid var(--tm-orange-mid);
+      color: var(--tm-orange-dk);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    .tm-step-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--tm-dark);
+      margin-bottom: 10px;
+    }
+    .tm-step-desc {
+      font-size: 0.88rem;
+      color: var(--tm-gray);
+      line-height: 1.75;
+    }
+
+    /* ── FEATURE ROWS ─────────────────────────────────────── */
+    .tm-feature {
+      padding: 96px 0;
+    }
+    .tm-feature--light { background: var(--tm-light); }
+    .tm-feature--white { background: #fff; }
+    .tm-feature-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 72px;
+      align-items: center;
+    }
+    .tm-feature-inner--rev { direction: rtl; }
+    .tm-feature-inner--rev > * { direction: ltr; }
+
+    /* feature visual card */
+    .tm-feature-visual {
+      position: relative;
+    }
+    .tm-feature-card {
+      background: #fff;
+      border: 1px solid #f0e8e0;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 4px 24px rgba(249,115,22,0.07), 0 24px 64px rgba(0,0,0,0.06);
+    }
+    .tm-feature-card-bar {
+      height: 4px;
+      background: linear-gradient(90deg, var(--tm-orange), var(--tm-orange-dk));
+    }
+    .tm-feature-card-body { padding: 28px; }
+    /* mock tracking item */
+    .tm-track-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 14px 16px;
+      border-radius: 12px;
+      background: #fafafa;
+      border: 1px solid #f0ece8;
+      margin-bottom: 10px;
+      transition: background 0.2s;
+    }
+    .tm-track-item:last-child { margin-bottom: 0; }
+    .tm-track-item-icon {
+      width: 40px; height: 40px;
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.7rem; font-weight: 800;
+      flex-shrink: 0;
+    }
+    .tm-track-item-icon--transit   { background: #dbeafe; color: #1d4ed8; }
+    .tm-track-item-icon--delivery  { background: #dcfce7; color: #166534; }
+    .tm-track-item-icon--delivered { background: #fef3c7; color: #92400e; }
+    .tm-track-info { flex: 1; }
+    .tm-track-id   { font-size: 0.75rem; font-weight: 700; color: var(--tm-dark); margin-bottom: 2px; }
+    .tm-track-status {
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 999px;
+      display: inline-block;
+    }
+    .tm-track-status--transit   { background: #dbeafe; color: #1d4ed8; }
+    .tm-track-status--delivery  { background: #dcfce7; color: #166534; }
+    .tm-track-status--delivered { background: #fef3c7; color: #92400e; }
+    .tm-track-date { font-size: 0.68rem; color: #aaa; margin-top: 2px; }
+    .tm-track-courier-logo {
+      height: 22px; width: auto;
+      max-width: 56px; object-fit: contain;
+      flex-shrink: 0;
+    }
+
+    /* feature copy */
+    .tm-feature-h3 {
+      font-size: clamp(1.6rem, 2.5vw, 2.1rem);
+      font-weight: 800;
+      color: var(--tm-dark);
+      line-height: 1.15;
+      margin-bottom: 14px;
+      letter-spacing: -0.02em;
+    }
+    .tm-feature-h3 em { font-style: normal; color: var(--tm-orange); }
+    .tm-feature-desc {
+      font-size: 0.97rem;
+      color: var(--tm-gray);
+      line-height: 1.8;
+      margin-bottom: 28px;
+    }
+    .tm-feature-bullets {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .tm-feature-bullets li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 0.9rem;
+      color: #555;
+      line-height: 1.6;
+    }
+    .tm-check {
+      width: 20px; height: 20px;
+      border-radius: 50%;
+      background: var(--tm-orange-lt);
+      border: 1px solid var(--tm-orange-mid);
+      color: var(--tm-orange-dk);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.6rem; font-weight: 800;
+      flex-shrink: 0; margin-top: 1px;
+    }
+
+    /* ── DOWNLOAD CTA ─────────────────────────────────────── */
+    .tm-download {
+      padding: 100px 0;
+      background: linear-gradient(135deg, #1c1917 0%, #292524 100%);
+      text-align: center;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+    .tm-download::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 60% 40%, rgba(249,115,22,0.18), transparent 60%);
+    }
+    .tm-download::after {
+      content: '';
+      position: absolute;
+      width: 500px; height: 500px;
+      border-radius: 50%;
+      border: 1px solid rgba(249,115,22,0.1);
+      top: 50%; left: 50%;
+      transform: translate(-50%,-50%);
+      pointer-events: none;
+    }
+    .tm-download > .container { position: relative; z-index: 1; }
+    .tm-download-logo {
+      height: 76px; width: auto;
+      margin: 0 auto 32px;
+      display: block;
+      /* invert to white since background is dark */
+      filter: brightness(0) invert(1);
+      opacity: 0.9;
+    }
+    .tm-download h2 {
+      font-size: clamp(2.4rem, 4.5vw, 3.6rem);
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 20px;
+      letter-spacing: -0.03em;
+    }
+    .tm-download h2 em { font-style: normal; color: var(--tm-orange); }
+    .tm-download p {
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.55);
+      max-width: 480px;
+      margin: 0 auto 48px;
+      line-height: 1.8;
+    }
+    .tm-dl-row {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 24px;
+    }
+    .tm-dl-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      padding: 16px 28px;
+      border-radius: 14px;
+      text-decoration: none;
+      transition: transform 0.22s, box-shadow 0.22s;
+      min-width: 200px;
+    }
+    .tm-dl-btn:hover { transform: translateY(-4px); }
+    .tm-dl-btn--play {
+      background: linear-gradient(135deg, var(--tm-orange), var(--tm-orange-dk));
+      color: #fff;
+      box-shadow: 0 4px 20px rgba(249,115,22,0.4);
+    }
+    .tm-dl-btn--play:hover { box-shadow: 0 12px 36px rgba(249,115,22,0.5); }
+    .tm-dl-btn--apple {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.18);
+      color: #fff;
+    }
+    .tm-dl-btn--apple:hover { background: rgba(255,255,255,0.14); }
+    .tm-dl-sub  { font-size: 0.7rem; opacity: 0.65; display: block; margin-bottom: 2px; }
+    .tm-dl-name { font-size: 1.05rem; font-weight: 700; display: block; }
+    .tm-download-by {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.3);
+      margin-top: 20px;
+    }
+    .tm-download-by a {
+      color: rgba(255,255,255,0.5);
+      text-decoration: none;
+    }
+    .tm-download-by a:hover { color: #fff; }
+
+    /* ── RESPONSIVE ───────────────────────────────────────── */
+    @media (max-width: 960px) {
+      .tm-hero-inner { grid-template-columns: 1fr; }
+      .tm-hero-copy  { padding-bottom: 0; }
+      .tm-hero-visual { justify-content: center; margin-top: 8px; }
+      .tm-hero-mockup { max-width: 320px; }
+      .tm-steps { grid-template-columns: 1fr; }
+      .tm-feature-inner { grid-template-columns: 1fr; gap: 40px; }
+      .tm-feature-inner--rev { direction: ltr; }
+      .tm-courier-grid { grid-template-columns: repeat(3, 1fr); }
+      .tm-app-inner { grid-template-columns: 1fr; gap: 40px; }
+      .tm-app-mockup img { max-width: 280px; }
+    }
+    @media (max-width: 600px) {
+      .tm-courier-grid { grid-template-columns: repeat(2, 1fr); }
+      .tm-dl-row { flex-direction: column; align-items: center; }
+      .tm-app-dl-row { flex-direction: column; }
+      .tm-search-form { max-width: 100%; }
+    }
+  </style>
+    <!-- Microsoft Clarity -->
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "s7fumshjhl");
+    </script>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W93DZHMG"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+  <!-- HEADER (Storemate nav with orange CTA) -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <img src="images/brand/storemate_logo.png" alt="Storemate logo" class="logo-img" />
+      </a>
+      <button class="mobile-menu-toggle" aria-label="Toggle menu" id="mobile-toggle">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="site-nav" id="site-nav">
+        <a href="index.html">Home</a>
+        <div class="nav-dropdown nav-mega-wrap">
+          <button class="nav-dropdown-trigger">
+            Product
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="nav-dropdown-menu">
+            <div class="nav-mega-cols">
+
+              <div class="nav-mega-col">
+                <span class="nav-mega-label">Features</span>
+                <a href="whatsapp-landing.html" class="nav-mega-link">
+                  <span class="nav-mega-icon nm-green"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></span>
+                  <span class="nav-mega-text"><strong>Self-Order Form</strong><span>Customers order via shared link</span></span>
+                </a>
+                <a href="returns-landing.html" class="nav-mega-link">
+                  <span class="nav-mega-icon nm-red"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 102.13-9.36L1 10"/></svg></span>
+                  <span class="nav-mega-text"><strong>Reduce Returns</strong><span>Block &amp; prevent problem orders</span></span>
+                </a>
+                <a href="courier-sync.html" class="nav-mega-link">
+                  <span class="nav-mega-icon nm-blue"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></span>
+                  <span class="nav-mega-text"><strong>Courier Sync</strong><span>Auto-sync orders to courier</span></span>
+                </a>
+                <a href="free-waybill-generator.html" class="nav-mega-link">
+                  <span class="nav-mega-icon nm-gold"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></span>
+                  <span class="nav-mega-text"><strong>Free Waybill Generator <span class="nav-free-badge">FREE</span></strong><span>Bulk print waybills, no signup</span></span>
+                </a>
+                <a href="waybill-landing.html" class="nav-mega-link">
+                  <span class="nav-mega-icon nm-gold"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg></span>
+                  <span class="nav-mega-text"><strong>Waybill Printing</strong><span>Branded waybills in 30 sec</span></span>
+                </a>
+                <a href="personalization.html" class="nav-mega-link">
+                  <span class="nav-mega-icon nm-purple"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 010 14.14"/><path d="M4.93 4.93a10 10 0 000 14.14"/></svg></span>
+                  <span class="nav-mega-text"><strong>Personalization</strong><span>Your software, your way</span></span>
+                </a>
+              </div>
+
+              <div class="nav-mega-col">
+                <span class="nav-mega-label">Apps</span>
+                <a href="mobile-app.html" class="nav-mega-link">
+                  <span class="nav-mega-icon nm-cyan"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></span>
+                  <span class="nav-mega-text"><strong>Mobile App</strong><span>Manage orders anywhere</span></span>
+                </a>
+                <a href="trackmate.html" class="nav-mega-link">
+                  <span class="nav-mega-icon nm-orange"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+                  <span class="nav-mega-text"><strong>Trackmate</strong><span>Track all courier packages</span></span>
+                </a>
+              </div>
+
+              <div class="nav-mega-col">
+                <span class="nav-mega-label">Resources</span>
+                <a href="why-storemate.html" class="nav-mega-link">
+                  <span class="nav-mega-icon nm-purple"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
+                  <span class="nav-mega-text"><strong>Why Storemate</strong><span>The story &amp; mission</span></span>
+                </a>
+                <a href="storemate-vs-excel.html" class="nav-mega-link">
+                  <span class="nav-mega-icon nm-green"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/></svg></span>
+                  <span class="nav-mega-text"><strong>vs Excel</strong><span>9 things Excel can't do</span></span>
+                </a>
+                <a href="implementation.html" class="nav-mega-link">
+                  <span class="nav-mega-icon nm-blue"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg></span>
+                  <span class="nav-mega-text"><strong>Implementation</strong><span>How we set you up</span></span>
+                </a>
+                <a href="podcast.html" class="nav-mega-link">
+                  <span class="nav-mega-icon nm-orange"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 00-3 3v8a3 3 0 006 0V4a3 3 0 00-3-3z"/><path d="M19 10v2a7 7 0 01-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg></span>
+                  <span class="nav-mega-text"><strong>Podcast</strong><span>Online business conversations</span></span>
+                </a>
+                <a href="free-course.html" class="nav-mega-link">
+                  <span class="nav-mega-icon nm-cyan"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></span>
+                  <span class="nav-mega-text"><strong>Free Course <span class="nav-free-badge">FREE</span></strong><span>16 video lessons</span></span>
+                </a>
+                <a href="cod-business-guide.html" class="nav-mega-link">
+                  <span class="nav-mega-icon nm-orange"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></span>
+                  <span class="nav-mega-text"><strong>COD Business Guide</strong><span>Start a delivery business in SL</span></span>
+                </a>
+                <a href="faq.html" class="nav-mega-link">
+                  <span class="nav-mega-icon nm-gold"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></span>
+                  <span class="nav-mega-text"><strong>FAQ</strong><span>Common questions answered</span></span>
+                </a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <a href="pricing.html">Pricing</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <a href="#tm-download" class="tm-nav-cta">Download App</a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ── HERO ──────────────────────────────────────────────── -->
+    <section class="tm-hero">
+      <div class="container">
+        <div class="tm-hero-inner">
+
+          <!-- Copy -->
+          <div class="tm-hero-copy">
+            <div class="tm-hero-brand">
+              <img src="images/trackmate/logo-mark.png" alt="Trackmate courier tracking Sri Lanka, real-time updates for all major couriers" />
+              <span class="tm-tagline-pill">Track your online orders</span>
+            </div>
+
+            <h1>Track all your online orders<br>in <em>one place.</em></h1>
+            <p class="tm-hero-sub">
+              Free courier tracking Sri Lanka. Enter any tracking number for real-time updates, Domex, TransExpress, Koombiyo, Royal Express and more, all in one place.
+            </p>
+
+            <!-- Live tracking search -->
+            <div class="tm-search-wrap">
+              <form class="tm-search-form" action="https://trackmate.lk/search/" method="get" target="_blank">
+                <input class="tm-search-input" type="text" name="q" placeholder="Enter tracking number…" autocomplete="off" />
+                <button class="tm-search-btn" type="submit" aria-label="Track">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                </button>
+              </form>
+              <p class="tm-search-hint">Powered by trackmate.lk &nbsp;·&nbsp; Works with all major Sri Lankan couriers</p>
+            </div>
+
+            <div class="tm-store-row">
+              <a href="https://play.google.com/store/apps/details?id=com.parallaxTechnologies.storemateOMS" target="_blank" rel="noopener noreferrer" class="app-store-badge">
+                <img src="images/screenshots/google-play.svg" alt="Get Trackmate on Google Play" />
+              </a>
+              <a href="https://apps.apple.com/ua/app/trackmate/id6754271406" target="_blank" rel="noopener noreferrer" class="app-store-badge">
+                <img src="images/screenshots/appstore.svg" alt="Download Trackmate on the App Store" />
+              </a>
+            </div>
+            <p class="tm-hero-note">Free to download &nbsp;·&nbsp; 6 Sri Lankan couriers &nbsp;·&nbsp; iOS &amp; Android</p>
+          </div>
+
+          <!-- Visual -->
+          <div class="tm-hero-visual">
+            <img src="images/trackmate/app-mockup.png" alt="Trackmate mobile app, track all your packages in one place" class="tm-hero-mockup" />
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── COURIER LOGOS ──────────────────────────────────────── -->
+    <section class="tm-couriers">
+      <div class="container">
+        <div class="tm-couriers-label">Courier Network, Our Courier Partners</div>
+        <div class="tm-courier-grid">
+          <div class="tm-courier-card"><img src="images/trackmate/couriers/domex.webp"   alt="Domex"    class="tm-courier-logo" /></div>
+          <div class="tm-courier-card"><img src="images/trackmate/couriers/citypak.png"  alt="Citypak"  class="tm-courier-logo" /></div>
+          <div class="tm-courier-card"><img src="images/trackmate/couriers/fde.png"      alt="FDE"      class="tm-courier-logo" /></div>
+          <div class="tm-courier-card"><img src="images/trackmate/couriers/transex.png"  alt="TransEx"  class="tm-courier-logo" /></div>
+          <div class="tm-courier-card"><img src="images/trackmate/couriers/eagle.png"    alt="Eagle"    class="tm-courier-logo" /></div>
+          <div class="tm-courier-card"><img src="images/trackmate/couriers/kolibiyo.png" alt="Kolibiyo" class="tm-courier-logo" /></div>
+        </div>
+        <p style="text-align:center;font-size:0.8rem;color:#bbb;margin-top:18px;">Integrated with trusted courier services for fast, reliable delivery tracking.</p>
+      </div>
+    </section>
+
+    <!-- ── HOW IT WORKS ───────────────────────────────────────── -->
+    <section class="tm-how">
+      <div class="container">
+        <div class="tm-eyebrow">How it works</div>
+        <h2 class="tm-h2">Three steps to<br><em>know exactly</em> where your package is</h2>
+        <p class="tm-sub">Trackmate works with every major Sri Lankan courier. One app. Any package. Any courier.</p>
+
+        <div class="tm-steps">
+
+          <div class="tm-step tm-reveal tm-d1">
+            <div class="tm-step-num">01</div>
+            <div class="tm-step-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            </div>
+            <div class="tm-step-title">Enter your tracking number</div>
+            <p class="tm-step-desc">Type or paste your tracking number into Trackmate. Works with TransEx, Royal Express, Curfox, FDE, Citypak, DomEx, Koombiyo and more Sri Lankan couriers.</p>
+          </div>
+
+          <div class="tm-step tm-reveal tm-d2">
+            <div class="tm-step-num">02</div>
+            <div class="tm-step-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div class="tm-step-title">See real-time status</div>
+            <p class="tm-step-desc">Trackmate checks the courier's live system and shows you the current status, In Transit, Out for Delivery, or Delivered, with the estimated delivery date.</p>
+          </div>
+
+          <div class="tm-step tm-reveal tm-d3">
+            <div class="tm-step-num">03</div>
+            <div class="tm-step-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            </div>
+            <div class="tm-step-title">All your packages in one list</div>
+            <p class="tm-step-desc">Recent trackings saved automatically. See all your active deliveries on one screen. No login to 6 different courier websites ever again.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── FEATURE 1: Universal Tracking ─────────────────────── -->
+    <section class="tm-feature tm-feature--light">
+      <div class="container">
+        <div class="tm-feature-inner">
+
+          <!-- Visual: mock tracking list -->
+          <div class="tm-feature-visual tm-reveal tm-d1">
+            <div class="tm-feature-card">
+              <div class="tm-feature-card-bar"></div>
+              <div class="tm-feature-card-body">
+                <div style="font-size:0.72rem;font-weight:700;color:#aaa;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:16px;">Recent Trackings</div>
+
+                <div class="tm-track-item">
+                  <div class="tm-track-item-icon tm-track-item-icon--transit">SDE</div>
+                  <div class="tm-track-info">
+                    <div class="tm-track-id">SPEX123456789LK</div>
+                    <div><span class="tm-track-status tm-track-status--transit">In Transit</span></div>
+                    <div class="tm-track-date">Est. delivery May 15, 2025</div>
+                  </div>
+                  <img src="images/couriers/curfox_logo.png" alt="Curfox courier logo" class="tm-track-courier-logo" />
+                </div>
+
+                <div class="tm-track-item">
+                  <div class="tm-track-item-icon tm-track-item-icon--delivery">KE</div>
+                  <div class="tm-track-info">
+                    <div class="tm-track-id">ABC987654321LK</div>
+                    <div><span class="tm-track-status tm-track-status--delivery">Out for Delivery</span></div>
+                    <div class="tm-track-date">Est. delivery May 14, 2025</div>
+                  </div>
+                  <img src="images/couriers/royalelogo.png" alt="Curfox courier logo" class="tm-track-courier-logo" />
+                </div>
+
+                <div class="tm-track-item">
+                  <div class="tm-track-item-icon tm-track-item-icon--delivered">RX</div>
+                  <div class="tm-track-info">
+                    <div class="tm-track-id">RED112233445LK</div>
+                    <div><span class="tm-track-status tm-track-status--delivered">Delivered</span></div>
+                    <div class="tm-track-date">Delivered May 12, 2025</div>
+                  </div>
+                  <img src="images/couriers/transexpress.png" alt="Curfox courier logo" class="tm-track-courier-logo" />
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="tm-reveal tm-d2">
+            <div class="tm-eyebrow">Universal Tracking</div>
+            <h3 class="tm-feature-h3">All couriers.<br><em>One app.</em><br>One list.</h3>
+            <p class="tm-feature-desc">
+              Stop opening six browser tabs to check six different courier websites for six different packages. Trackmate pulls the status of every package, regardless of which courier has it, into a single clean list.
+            </p>
+            <ul class="tm-feature-bullets">
+              <li><div class="tm-check">✓</div>Works with all major Sri Lankan couriers</li>
+              <li><div class="tm-check">✓</div>Recent trackings saved automatically, no re-entering</li>
+              <li><div class="tm-check">✓</div>See courier name and logo per package at a glance</li>
+              <li><div class="tm-check">✓</div>Track unlimited packages, active or past deliveries</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── FEATURE 2: Real-time status ───────────────────────── -->
+    <section class="tm-feature tm-feature--white">
+      <div class="container">
+        <div class="tm-feature-inner tm-feature-inner--rev">
+
+          <!-- Status cards visual -->
+          <div class="tm-feature-visual tm-reveal tm-d1">
+            <div style="display:flex;flex-direction:column;gap:14px;">
+
+              <div style="background:#fff;border:1px solid #f0e8e0;border-radius:16px;padding:20px 22px;display:flex;align-items:center;gap:16px;box-shadow:0 4px 20px rgba(0,0,0,0.05);">
+                <div style="width:44px;height:44px;border-radius:12px;background:#dbeafe;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                </div>
+                <div>
+                  <div style="font-size:0.72rem;font-weight:700;color:#aaa;margin-bottom:3px;">STATUS</div>
+                  <div style="font-size:1rem;font-weight:700;color:#1d4ed8;">In Transit</div>
+                  <div style="font-size:0.75rem;color:#aaa;">Package is on the way</div>
+                </div>
+              </div>
+
+              <div style="background:#fff;border:1px solid #f0e8e0;border-radius:16px;padding:20px 22px;display:flex;align-items:center;gap:16px;box-shadow:0 4px 20px rgba(0,0,0,0.05);">
+                <div style="width:44px;height:44px;border-radius:12px;background:var(--tm-orange-lt);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--tm-orange-dk)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <div>
+                  <div style="font-size:0.72rem;font-weight:700;color:#aaa;margin-bottom:3px;">STATUS</div>
+                  <div style="font-size:1rem;font-weight:700;color:var(--tm-orange-dk);">Out for Delivery</div>
+                  <div style="font-size:0.75rem;color:#aaa;">Your delivery is nearby</div>
+                </div>
+              </div>
+
+              <div style="background:#fff;border:1px solid #f0e8e0;border-radius:16px;padding:20px 22px;display:flex;align-items:center;gap:16px;box-shadow:0 4px 20px rgba(0,0,0,0.05);">
+                <div style="width:44px;height:44px;border-radius:12px;background:#dcfce7;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#166534" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                </div>
+                <div>
+                  <div style="font-size:0.72rem;font-weight:700;color:#aaa;margin-bottom:3px;">STATUS</div>
+                  <div style="font-size:1rem;font-weight:700;color:#166534;">Delivered</div>
+                  <div style="font-size:0.75rem;color:#aaa;">Package received successfully</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="tm-reveal tm-d2">
+            <div class="tm-eyebrow">Real-Time Status</div>
+            <h3 class="tm-feature-h3">Always know<br>exactly <em>where</em><br>your package is.</h3>
+            <p class="tm-feature-desc">
+              Trackmate gives you live delivery status pulled directly from the courier's system. In Transit, Out for Delivery, or Delivered, you always know the moment something changes.
+            </p>
+            <ul class="tm-feature-bullets">
+              <li><div class="tm-check">✓</div>Live status refreshed from courier systems</li>
+              <li><div class="tm-check">✓</div>Estimated delivery date shown per package</li>
+              <li><div class="tm-check">✓</div>Clear colour-coded status, no confusing codes</li>
+              <li><div class="tm-check">✓</div>Full delivery history per tracking number</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── DOWNLOAD ───────────────────────────────────────────── -->
+    <!-- ── APP MOCKUP ────────────────────────────────────────── -->
+    <section class="tm-app-section">
+      <div class="container">
+        <div class="tm-app-inner">
+
+          <div class="tm-app-mockup tm-reveal tm-d1">
+            <img src="images/trackmate/app-mockup.png" alt="TrackMate app screens showing tracking interface" />
+          </div>
+
+          <div class="tm-app-copy tm-reveal tm-d2">
+            <div class="tm-app-copy-label">TrackMate App</div>
+            <h3>Track every parcel with<br>the <em>TrackMate app</em></h3>
+            <p>Real-time parcel updates, delivery milestones, and courier status, all in one app. Search your waybill and track deliveries across multiple courier services including Domex, TransExpress, Koombiyo, and Royal Express.</p>
+            <div class="tm-app-dl-row">
+              <a href="https://apps.apple.com/ua/app/trackmate/id6754271406" target="_blank" rel="noopener noreferrer" class="app-store-badge">
+                <img src="images/screenshots/appstore.svg" alt="Download Trackmate on the App Store" />
+              </a>
+              <a href="https://play.google.com/store/apps/details?id=com.parallaxTechnologies.storemateOMS" target="_blank" rel="noopener noreferrer" class="app-store-badge">
+                <img src="images/screenshots/google-play.svg" alt="Get Trackmate on Google Play" />
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="tm-download" id="tm-download">
+      <div class="container">
+        <img src="images/trackmate/logo-mark.png" alt="Trackmate" class="tm-download-logo" />
+        <h2>Stop using multiple platforms<br>to <em>track your orders.</em></h2>
+        <p>Free to download. All Sri Lankan couriers supported. Know where every package is, in one place.</p>
+        <div class="tm-dl-row">
+          <a href="https://play.google.com/store/apps/details?id=com.parallaxTechnologies.storemateOMS" target="_blank" rel="noopener noreferrer" class="app-store-badge">
+            <img src="images/screenshots/google-play.svg" alt="Get Trackmate on Google Play" />
+          </a>
+          <a href="https://apps.apple.com/ua/app/trackmate/id6754271406" target="_blank" rel="noopener noreferrer" class="app-store-badge">
+            <img src="images/screenshots/appstore.svg" alt="Download Trackmate on the App Store" />
+          </a>
+        </div>
+        <p class="tm-download-by">
+          by &nbsp;<a href="index.html">Storemate OMS</a> &nbsp;·&nbsp; From seller to Entrepreneur.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="ft-orb ft-orb--1" aria-hidden="true"></div>
+    <div class="ft-orb ft-orb--2" aria-hidden="true"></div>
+    <div class="ft-orb ft-orb--3" aria-hidden="true"></div>
+
+    <div class="ft-main">
+      <div class="container">
+        <div class="ft-grid">
+
+          <div class="ft-brand-col ft-reveal ft-reveal-d1">
+            <img src="images/brand/storemate_logo.png" alt="Storemate" class="ft-logo-img" />
+            <p class="ft-tagline">From seller to Entrepreneur.</p>
+            <p class="ft-mission">Built from the experience of 25M orders and 30,000+ sellers. Built for sellers who are building something real.</p>
+            <div class="ft-social">
+              <a href="https://www.facebook.com/storemateonline" class="ft-social-link" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+              <a href="https://www.instagram.com/storemate_oms/" class="ft-social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+              <a href="https://www.youtube.com/@Storemate" class="ft-social-link" aria-label="YouTube" target="_blank" rel="noopener noreferrer"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 001.46 6.42 29 29 0 001 12a29 29 0 00.46 5.58 2.78 2.78 0 001.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.96A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon fill="white" points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg></a>
+              <a href="https://www.linkedin.com/showcase/storemate-oms-system" class="ft-social-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+              <a href="https://www.tiktok.com/@storemate_" class="ft-social-link" aria-label="TikTok" target="_blank" rel="noopener noreferrer">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.91a8.17 8.17 0 004.77 1.52V7a4.85 4.85 0 01-1-.31z"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="ft-reveal ft-reveal-d2">
+            <h4 class="ft-col-heading">Product</h4>
+            <ul class="ft-link-list">
+              <li><a href="index.html#features">Features</a></li>
+              <li><a href="why-storemate.html">Why Storemate</a></li>
+              <li><a href="whatsapp-landing.html">Self-Order Form</a></li>
+              <li><a href="returns-landing.html">Reduce Returns</a></li>
+              <li><a href="waybill-landing.html">Waybill Printing</a></li>
+              <li><a href="mobile-app.html">Mobile App</a></li>
+              <li><a href="trackmate.html" style="color:var(--tm-orange);font-weight:600;">Trackmate</a></li>
+            </ul>
+          </div>
+
+          <div class="ft-reveal ft-reveal-d3">
+            <h4 class="ft-col-heading">Company</h4>
+            <ul class="ft-link-list">
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="ft-reveal ft-reveal-d4">
+            <h4 class="ft-col-heading">Legal</h4>
+            <ul class="ft-link-list">
+              <li><a href="privacy.html">Privacy Policy</a></li>
+              <li><a href="terms.html">Terms of Service</a></li>
+              <li><a href="security.html">Data Security</a></li>
+              <li><a href="security.html">ISO 27001</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="ft-bottom">
+      <div class="container">
+        <div class="ft-bottom-inner">
+          <p class="ft-copyright">&copy; <span class="ft-year"></span> Parallax Technologies (Pvt) Ltd. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      (function() {
+        document.querySelector('.ft-year').textContent = new Date().getFullYear();
+        var footer = document.querySelector('.site-footer');
+        if (!footer) return;
+        var obs = new IntersectionObserver(function(entries) {
+          entries.forEach(function(e) { if (e.isIntersecting) e.target.classList.add('ft-visible'); });
+        }, { threshold: 0.08 });
+        footer.querySelectorAll('.ft-reveal').forEach(function(el) { obs.observe(el); });
+      })();
+    </script>
+  </footer>
+
+  <script>
+    (function() {
+      var obs = new IntersectionObserver(function(entries) {
+        entries.forEach(function(e) { if (e.isIntersecting) e.target.classList.add('tm-visible'); });
+      }, { threshold: 0.1 });
+      document.querySelectorAll('.tm-reveal').forEach(function(el) { obs.observe(el); });
+    })();
+  </script>
+  <script src="js/nav.js"></script>
+  <script src="js/cookie-consent.js"></script>
+  <script src="js/whatsapp-widget.js"></script>
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Trackmate",
+  "applicationCategory": "UtilitiesApplication",
+  "url": "https://trackmate.lk",
+  "description": "Track parcels online with real-time courier updates. Supports Domex, TransExpress, Koombiyo, Royal Express, FDE, and all major Sri Lankan couriers in one place.",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "LKR"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Storemate",
+    "url": "https://storemate.lk"
+  }
+}
+  </script>
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://storemate.lk"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Trackmate",
+      "item": "https://storemate.lk/trackmate"
+    }
+  ]
+}
+  </script>
+</body>
+</html>

@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-W93DZHMG');</script>
+    <!-- End Google Tag Manager -->
+  <meta charset="UTF-8" />
+  <meta name="description" content="Storemate is the order management app Sri Lanka online sellers use. Manage orders, track deliveries, and view live sales from anywhere. Free on iOS and Android." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+  <link rel="apple-touch-icon" href="images/favicon.png" />
+  <title>Storemate Mobile App, Your Business in Your Pocket</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    :root {
+      --app-navy:  #07112b;
+      --app-blue:  #2153c0;
+      --app-cyan:  #00b4d8;
+      --app-dark:  #0a0f1e;
+    }
+
+    /* ── HERO ─────────────────────────────────────────────── */
+    .ma-hero {
+      background: url('images/screenshots/mobile/hero.png') 75% 40% / cover no-repeat;
+      padding: 112px 0 96px;
+      overflow: hidden;
+      position: relative;
+    }
+    /* dark gradient, heavy on left for text, fades right to show photo */
+    .ma-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        105deg,
+        rgba(7,17,43,0.95) 0%,
+        rgba(7,17,43,0.90) 35%,
+        rgba(7,17,43,0.65) 58%,
+        rgba(7,17,43,0.30) 80%,
+        rgba(7,17,43,0.15) 100%
+      );
+      pointer-events: none;
+    }
+    /* subtle dot grid texture over the photo */
+    .ma-hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(rgba(255,255,255,0.03) 1px, transparent 1px);
+      background-size: 36px 36px;
+      pointer-events: none;
+    }
+    .ma-hero-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 680px;
+      padding: 20px 0 10px;
+    }
+    .ma-hero-copy {
+      color: #fff;
+    }
+    .ma-hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(0,180,216,0.12);
+      border: 1px solid rgba(0,180,216,0.28);
+      border-radius: 999px;
+      padding: 7px 18px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--app-cyan);
+      margin-bottom: 28px;
+    }
+    .ma-hero-badge::before {
+      content: '';
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: var(--app-cyan);
+      flex-shrink: 0;
+      animation: ma-pulse 2s ease-in-out infinite;
+    }
+    @keyframes ma-pulse {
+      0%,100% { opacity:1; transform:scale(1); }
+      50%      { opacity:0.4; transform:scale(0.7); }
+    }
+    .ma-hero h1 {
+      font-size: clamp(2.8rem, 5vw, 4.2rem);
+      font-weight: 300;
+      line-height: 1.08;
+      letter-spacing: -0.03em;
+      margin-bottom: 22px;
+    }
+    .ma-hero h1 strong { font-weight: 800; }
+    .ma-hero h1 em {
+      font-style: normal;
+      color: var(--app-cyan);
+    }
+    .ma-hero-sub {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.8;
+      max-width: 480px;
+      margin-bottom: 40px;
+    }
+    /* App store buttons */
+    .ma-store-btns {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 28px;
+    }
+    .ma-store-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 22px;
+      border-radius: 12px;
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+    .ma-store-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 28px rgba(0,0,0,0.35);
+    }
+    .ma-store-btn--play {
+      background: #fff;
+      color: #111;
+    }
+    .ma-store-btn--apple {
+      background: #000;
+      color: #fff;
+      border-color: rgba(255,255,255,0.15);
+    }
+    .ma-store-btn-icon { flex-shrink: 0; }
+    .ma-store-btn-text { line-height: 1.2; }
+    .ma-store-btn-sub  { font-size: 0.65rem; opacity: 0.65; display: block; }
+    .ma-store-btn-name { font-size: 1rem; font-weight: 700; display: block; }
+    .ma-hero-note {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.32);
+    }
+
+    /* Hero visual, marketing image */
+    .ma-hero-visual {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .ma-hero-img-wrap {
+      position: relative;
+      width: 100%;
+      max-width: 500px;
+    }
+    .ma-hero-img-wrap img {
+      width: 100%;
+      display: block;
+      border-radius: 20px;
+      box-shadow:
+        0 0 0 1px rgba(255,255,255,0.08),
+        0 24px 64px rgba(0,0,0,0.5);
+    }
+    /* floating stat chip */
+    .ma-hero-chip {
+      position: absolute;
+      bottom: 14%;
+      left: -20px;
+      background: rgba(7,17,43,0.75);
+      backdrop-filter: blur(14px);
+      border: 1px solid rgba(0,180,216,0.3);
+      border-radius: 14px;
+      padding: 14px 18px;
+      color: #fff;
+    }
+    .ma-hero-chip-num {
+      font-size: 1.4rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1;
+      margin-bottom: 4px;
+      color: var(--app-cyan);
+    }
+    .ma-hero-chip-lbl {
+      font-size: 0.7rem;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.3;
+    }
+
+    /* ── MARQUEE STRIP ────────────────────────────────────── */
+    .ma-strip {
+      padding: 16px 0;
+      background: var(--app-blue);
+      overflow: hidden;
+    }
+    .ma-strip-track {
+      display: flex;
+      gap: 40px;
+      width: max-content;
+      animation: ma-marquee 28s linear infinite;
+    }
+    @keyframes ma-marquee {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+    .ma-strip-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      white-space: nowrap;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: rgba(255,255,255,0.8);
+      flex-shrink: 0;
+    }
+    .ma-strip-dot {
+      width: 5px; height: 5px;
+      border-radius: 50%;
+      background: var(--app-cyan);
+      flex-shrink: 0;
+    }
+
+    /* ── SHARED ───────────────────────────────────────────── */
+    .ma-eyebrow {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--app-blue);
+      margin-bottom: 12px;
+    }
+    .ma-h2 {
+      font-size: clamp(2rem, 3.5vw, 2.8rem);
+      font-weight: 300;
+      line-height: 1.12;
+      letter-spacing: -0.02em;
+      color: #111e35;
+      margin-bottom: 16px;
+    }
+    .ma-h2 strong { font-weight: 800; }
+    .ma-h2--white { color: #fff; }
+    .ma-sub {
+      font-size: 1rem;
+      color: #697285;
+      line-height: 1.75;
+      max-width: 520px;
+    }
+    .ma-sub--muted { color: rgba(255,255,255,0.55); }
+
+    /* ── REVEAL ───────────────────────────────────────────── */
+    .ma-reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .ma-reveal.ma-visible { opacity: 1; transform: translateY(0); }
+    .ma-d1 { transition-delay: 0.06s; }
+    .ma-d2 { transition-delay: 0.14s; }
+    .ma-d3 { transition-delay: 0.22s; }
+
+    /* ── FEATURE ROWS ─────────────────────────────────────── */
+    .ma-feature {
+      padding: 96px 0;
+    }
+    .ma-feature--white { background: #fff; }
+    .ma-feature--gray  { background: #f3f5f9; }
+    .ma-feature-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 56px;
+      align-items: center;
+    }
+    .ma-feature-inner--rev { direction: rtl; }
+    .ma-feature-inner--rev > * { direction: ltr; }
+
+    /* phone screenshot */
+    .ma-phone-wrap {
+      position: relative;
+      display: flex;
+      justify-content: center;
+    }
+    .ma-phone-img {
+      width: 100%;
+      max-width: 420px;
+      display: block;
+      filter: drop-shadow(0 32px 64px rgba(0,0,0,0.2));
+      transition: transform 0.4s ease;
+    }
+    .ma-phone-wrap:hover .ma-phone-img {
+      transform: translateY(-10px);
+    }
+    /* glow behind phone */
+    .ma-phone-glow {
+      position: absolute;
+      top: 20%; left: 50%;
+      transform: translateX(-50%);
+      width: 300px; height: 300px;
+      border-radius: 50%;
+      filter: blur(80px);
+      opacity: 0.3;
+      pointer-events: none;
+    }
+    .ma-phone-glow--blue  { background: #2153c0; }
+    .ma-phone-glow--cyan  { background: #00b4d8; }
+    .ma-phone-glow--green { background: #27ae60; }
+
+    /* feature copy */
+    .ma-feature-step {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px; height: 36px;
+      border-radius: 10px;
+      background: rgba(33,83,192,0.1);
+      color: var(--app-blue);
+      font-size: 0.8rem;
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
+    .ma-feature-h3 {
+      font-size: clamp(1.5rem, 2.4vw, 2rem);
+      font-weight: 300;
+      color: #111e35;
+      line-height: 1.2;
+      margin-bottom: 14px;
+    }
+    .ma-feature-h3 strong { font-weight: 800; }
+    .ma-feature-desc {
+      font-size: 0.97rem;
+      color: #697285;
+      line-height: 1.8;
+      margin-bottom: 28px;
+    }
+    .ma-feature-bullets {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .ma-feature-bullets li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 0.9rem;
+      color: #444;
+      line-height: 1.6;
+    }
+    .ma-bullet-check {
+      width: 20px; height: 20px;
+      border-radius: 50%;
+      background: rgba(33,83,192,0.1);
+      border: 1px solid rgba(33,83,192,0.18);
+      color: var(--app-blue);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+      font-size: 0.6rem;
+      font-weight: 800;
+    }
+    .ma-feature-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      margin-top: 28px;
+      padding: 6px 14px;
+      background: rgba(33,83,192,0.08);
+      border: 1px solid rgba(33,83,192,0.18);
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--app-blue);
+      letter-spacing: 0.04em;
+    }
+
+    /* ── DOWNLOAD SECTION ─────────────────────────────────── */
+    .ma-download {
+      padding: 100px 0;
+      background: linear-gradient(145deg, var(--app-navy) 0%, #0d1f3c 55%, #112248 100%);
+      text-align: center;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+    .ma-download::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at center, rgba(0,180,216,0.12), transparent 65%);
+    }
+    .ma-download > .container { position: relative; }
+    .ma-download h2 {
+      font-size: clamp(2.4rem, 4.5vw, 3.6rem);
+      font-weight: 300;
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+    .ma-download h2 strong { font-weight: 800; }
+    .ma-download h2 em { font-style: normal; color: var(--app-cyan); }
+    .ma-download p {
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.55);
+      max-width: 500px;
+      margin: 0 auto 48px;
+      line-height: 1.8;
+    }
+    .ma-download-btns {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 24px;
+    }
+    .ma-dl-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      padding: 16px 28px;
+      border-radius: 14px;
+      text-decoration: none;
+      transition: transform 0.22s, box-shadow 0.22s;
+      min-width: 200px;
+    }
+    .ma-dl-btn:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 40px rgba(0,0,0,0.4);
+    }
+    .ma-dl-btn--play {
+      background: #fff;
+      color: #111;
+    }
+    .ma-dl-btn--apple {
+      background: #1a1a1a;
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.15);
+    }
+    .ma-dl-btn-icon { flex-shrink: 0; }
+    .ma-dl-btn-text { text-align: left; }
+    .ma-dl-btn-sub  { font-size: 0.7rem; opacity: 0.6; display: block; margin-bottom: 1px; }
+    .ma-dl-btn-name { font-size: 1.1rem; font-weight: 700; display: block; }
+    .ma-download-note {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.3);
+    }
+    /* QR placeholder rings */
+    .ma-qr-hint {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 32px;
+      color: rgba(255,255,255,0.35);
+      font-size: 0.8rem;
+    }
+    .ma-qr-hint-line {
+      flex: 1;
+      max-width: 80px;
+      height: 1px;
+      background: rgba(255,255,255,0.12);
+    }
+
+    /* ── RESPONSIVE ───────────────────────────────────────── */
+    @media (max-width: 960px) {
+      .ma-hero { padding: 72px 0 60px; }
+      .ma-hero-inner { grid-template-columns: 1fr; gap: 40px; }
+      .ma-hero-img-wrap { max-width: 420px; margin: 0 auto; }
+      .ma-hero-chip { left: 0; bottom: 12%; }
+      .ma-feature-inner { grid-template-columns: 1fr; gap: 40px; }
+      .ma-feature-inner--rev { direction: ltr; }
+      .ma-phone-img { max-width: 320px; }
+    }
+    @media (max-width: 600px) {
+      .ma-store-btns { flex-direction: column; align-items: flex-start; }
+      .ma-download-btns { flex-direction: column; align-items: center; }
+      .ma-dl-btn { min-width: 220px; }
+    }
+  </style>
+    <!-- Microsoft Clarity -->
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "s7fumshjhl");
+    </script>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W93DZHMG"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <img src="images/brand/storemate_logo.png" alt="Storemate logo" class="logo-img" />
+      </a>
+      <button class="mobile-menu-toggle" aria-label="Toggle menu" id="mobile-toggle">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="site-nav" id="site-nav">
+        <a href="index.html">Home</a>
+        <div class="nav-dropdown nav-mega-wrap">
+          <button class="nav-dropdown-trigger">
+            Product
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="nav-dropdown-menu">
+            <div class="nav-mega-cols">
+
+              <div class="nav-mega-col">
+                <span class="nav-mega-label">Features</span>
+                <a href="whatsapp-landing.html" class="nav-mega-link">
+                  <span class="nav-mega-icon nm-green"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></span>
+                  <span class="nav-mega-text"><strong>Self-Order Form</strong><span>Customers order via shared link</span></span>
+                </a>
+                <a href="returns-landing.html" class="nav-mega-link">
+                  <span class="nav-mega-icon nm-red"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 102.13-9.36L1 10"/></svg></span>
+                  <span class="nav-mega-text"><strong>Reduce Returns</strong><span>Block &amp; prevent problem orders</span></span>
+                </a>
+                <a href="courier-sync.html" class="nav-mega-link">
+                  <span class="nav-mega-icon nm-blue"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></span>
+                  <span class="nav-mega-text"><strong>Courier Sync</strong><span>Auto-sync orders to courier</span></span>
+                </a>
+                <a href="free-waybill-generator.html" class="nav-mega-link">
+                  <span class="nav-mega-icon nm-gold"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></span>
+                  <span class="nav-mega-text"><strong>Free Waybill Generator <span class="nav-free-badge">FREE</span></strong><span>Bulk print waybills, no signup</span></span>
+                </a>
+                <a href="waybill-landing.html" class="nav-mega-link">
+                  <span class="nav-mega-icon nm-gold"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg></span>
+                  <span class="nav-mega-text"><strong>Waybill Printing</strong><span>Branded waybills in 30 sec</span></span>
+                </a>
+                <a href="personalization.html" class="nav-mega-link">
+                  <span class="nav-mega-icon nm-purple"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 010 14.14"/><path d="M4.93 4.93a10 10 0 000 14.14"/></svg></span>
+                  <span class="nav-mega-text"><strong>Personalization</strong><span>Your software, your way</span></span>
+                </a>
+              </div>
+
+              <div class="nav-mega-col">
+                <span class="nav-mega-label">Apps</span>
+                <a href="mobile-app.html" class="nav-mega-link">
+                  <span class="nav-mega-icon nm-cyan"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></span>
+                  <span class="nav-mega-text"><strong>Mobile App</strong><span>Manage orders anywhere</span></span>
+                </a>
+                <a href="trackmate.html" class="nav-mega-link">
+                  <span class="nav-mega-icon nm-orange"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+                  <span class="nav-mega-text"><strong>Trackmate</strong><span>Track all courier packages</span></span>
+                </a>
+              </div>
+
+              <div class="nav-mega-col">
+                <span class="nav-mega-label">Resources</span>
+                <a href="why-storemate.html" class="nav-mega-link">
+                  <span class="nav-mega-icon nm-purple"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
+                  <span class="nav-mega-text"><strong>Why Storemate</strong><span>The story &amp; mission</span></span>
+                </a>
+                <a href="storemate-vs-excel.html" class="nav-mega-link">
+                  <span class="nav-mega-icon nm-green"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/></svg></span>
+                  <span class="nav-mega-text"><strong>vs Excel</strong><span>9 things Excel can't do</span></span>
+                </a>
+                <a href="implementation.html" class="nav-mega-link">
+                  <span class="nav-mega-icon nm-blue"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg></span>
+                  <span class="nav-mega-text"><strong>Implementation</strong><span>How we set you up</span></span>
+                </a>
+                <a href="podcast.html" class="nav-mega-link">
+                  <span class="nav-mega-icon nm-orange"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 00-3 3v8a3 3 0 006 0V4a3 3 0 00-3-3z"/><path d="M19 10v2a7 7 0 01-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg></span>
+                  <span class="nav-mega-text"><strong>Podcast</strong><span>Online business conversations</span></span>
+                </a>
+                <a href="free-course.html" class="nav-mega-link">
+                  <span class="nav-mega-icon nm-cyan"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></span>
+                  <span class="nav-mega-text"><strong>Free Course <span class="nav-free-badge">FREE</span></strong><span>16 video lessons</span></span>
+                </a>
+                <a href="cod-business-guide.html" class="nav-mega-link">
+                  <span class="nav-mega-icon nm-orange"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></span>
+                  <span class="nav-mega-text"><strong>COD Business Guide</strong><span>Start a delivery business in SL</span></span>
+                </a>
+                <a href="faq.html" class="nav-mega-link">
+                  <span class="nav-mega-icon nm-gold"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></span>
+                  <span class="nav-mega-text"><strong>FAQ</strong><span>Common questions answered</span></span>
+                </a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <a href="pricing.html">Pricing</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="nav-dropdown nav-login">
+        <button class="nav-dropdown-trigger">
+          Login
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="nav-dropdown-menu">
+          <a href="https://oms.storemate.cloud/login" target="_blank" rel="noopener noreferrer">Login to OMS</a>
+          <a href="https://app.storemate.cloud/login" target="_blank" rel="noopener noreferrer">POS Lite Login</a>
+          <a href="https://app.storematepro.lk/login" target="_blank" rel="noopener noreferrer">POS Pro Login</a>
+        </div>
+      </div>
+      <a href="#ma-download" class="nav-cta-btn">Download App</a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ── HERO ──────────────────────────────────────────────── -->
+    <section class="ma-hero">
+      <div class="container">
+        <div class="ma-hero-inner">
+
+          <!-- Copy -->
+          <div class="ma-hero-copy">
+            <div class="ma-hero-badge">Mobile App</div>
+            <h1>Your entire online<br>business, now in<br>your <em>pocket.</em></h1>
+            <p class="ma-hero-sub">
+              Sri Lanka's order management app for online sellers. Manage orders, track deliveries, create new orders, and watch live sales, from anywhere. The Storemate app puts your full OMS in your hand.
+            </p>
+            <div class="ma-store-btns">
+              <a href="https://play.google.com/store/apps/details?id=com.parallaxTechnologies.storemateOMS" target="_blank" rel="noopener noreferrer" class="app-store-badge">
+                <img src="images/screenshots/google-play.svg" alt="Get Storemate OMS on Google Play" />
+              </a>
+              <a href="https://apps.apple.com/lk/app/storemate-oms/id6756418519" target="_blank" rel="noopener noreferrer" class="app-store-badge">
+                <img src="images/screenshots/appstore.svg" alt="Download Storemate OMS on the App Store" />
+              </a>
+            </div>
+            <p class="ma-hero-note">Free for all Storemate subscribers &nbsp;·&nbsp; iOS &amp; Android</p>
+          </div>
+
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── MARQUEE ────────────────────────────────────────────── -->
+    <div class="ma-strip">
+      <div class="ma-strip-track">
+        <span class="ma-strip-item"><span class="ma-strip-dot"></span>Live order dashboard</span>
+        <span class="ma-strip-item"><span class="ma-strip-dot"></span>Create orders on the go</span>
+        <span class="ma-strip-item"><span class="ma-strip-dot"></span>Sales &amp; revenue charts</span>
+        <span class="ma-strip-item"><span class="ma-strip-dot"></span>Real-time courier sync</span>
+        <span class="ma-strip-item"><span class="ma-strip-dot"></span>City-wise order analytics</span>
+        <span class="ma-strip-item"><span class="ma-strip-dot"></span>Order status tracking</span>
+        <span class="ma-strip-item"><span class="ma-strip-dot"></span>Free for all subscribers</span>
+        <span class="ma-strip-item"><span class="ma-strip-dot"></span>iOS &amp; Android</span>
+        <span class="ma-strip-item"><span class="ma-strip-dot"></span>Live order dashboard</span>
+        <span class="ma-strip-item"><span class="ma-strip-dot"></span>Create orders on the go</span>
+        <span class="ma-strip-item"><span class="ma-strip-dot"></span>Sales &amp; revenue charts</span>
+        <span class="ma-strip-item"><span class="ma-strip-dot"></span>Real-time courier sync</span>
+        <span class="ma-strip-item"><span class="ma-strip-dot"></span>City-wise order analytics</span>
+        <span class="ma-strip-item"><span class="ma-strip-dot"></span>Order status tracking</span>
+        <span class="ma-strip-item"><span class="ma-strip-dot"></span>Free for all subscribers</span>
+        <span class="ma-strip-item"><span class="ma-strip-dot"></span>iOS &amp; Android</span>
+      </div>
+    </div>
+
+    <!-- ── FEATURE 1: DASHBOARD ───────────────────────────────── -->
+    <section class="ma-feature ma-feature--white">
+      <div class="container">
+        <div class="ma-feature-inner">
+
+          <div class="ma-phone-wrap ma-reveal ma-d1">
+            <div class="ma-phone-glow ma-phone-glow--blue"></div>
+            <img src="images/screenshots/mobile/mobile 4.png" alt="Storemate order management app Sri Lanka, mobile dashboard with orders and sales analytics" class="ma-phone-img" />
+          </div>
+
+          <div class="ma-reveal ma-d2">
+            <div class="ma-feature-step">01</div>
+            <div class="ma-eyebrow">Live Dashboard</div>
+            <h3 class="ma-feature-h3">Your business numbers,<br><strong>always in your hand</strong></h3>
+            <p class="ma-feature-desc">
+              Open the app and your entire business snapshot is right there. Total orders, total sales, growth trends, updated in real time. You always know exactly how today is going without being at your desk.
+            </p>
+            <ul class="ma-feature-bullets">
+              <li><div class="ma-bullet-check">✓</div>Order summary with live total and growth %</li>
+              <li><div class="ma-bullet-check">✓</div>Sales summary with Rs. revenue and trend line</li>
+              <li><div class="ma-bullet-check">✓</div>Top cities of sales, Colombo, Kandy, Galle and more</li>
+              <li><div class="ma-bullet-check">✓</div>Orders vs sales chart over 6 months</li>
+              <li><div class="ma-bullet-check">✓</div>Filters by year, see any period instantly</li>
+            </ul>
+            <div class="ma-feature-tag">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+              Real-time data, always current
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── FEATURE 2: ORDERS ──────────────────────────────────── -->
+    <section class="ma-feature ma-feature--gray">
+      <div class="container">
+        <div class="ma-feature-inner ma-feature-inner--rev">
+
+          <div class="ma-phone-wrap ma-reveal ma-d1">
+            <div class="ma-phone-glow ma-phone-glow--cyan"></div>
+            <img src="images/screenshots/mobile/mobile 2.png" alt="Storemate app orders list with search and status filters" class="ma-phone-img" />
+          </div>
+
+          <div class="ma-reveal ma-d2">
+            <div class="ma-feature-step">02</div>
+            <div class="ma-eyebrow">Order Management</div>
+            <h3 class="ma-feature-h3">Every order,<br><strong>right where you need it</strong></h3>
+            <p class="ma-feature-desc">
+              See your full order list on your phone. Search by customer name or order ID. Filter by status, All, Pending, Processing, Completed. Every detail, customer name, phone, city, COD amount, visible at a glance.
+            </p>
+            <ul class="ma-feature-bullets">
+              <li><div class="ma-bullet-check">✓</div>Full order list with instant search</li>
+              <li><div class="ma-bullet-check">✓</div>Filter by All / Pending / Processing / Completed</li>
+              <li><div class="ma-bullet-check">✓</div>Customer name, phone, city and COD shown per order</li>
+              <li><div class="ma-bullet-check">✓</div>Tap any order to see full details</li>
+              <li><div class="ma-bullet-check">✓</div>Order creation success notifications in-app</li>
+            </ul>
+            <div class="ma-feature-tag">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              Find any order in seconds
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── FEATURE 3: CREATE ORDER ────────────────────────────── -->
+    <section class="ma-feature ma-feature--white">
+      <div class="container">
+        <div class="ma-feature-inner">
+
+          <div class="ma-phone-wrap ma-reveal ma-d1">
+            <div class="ma-phone-glow ma-phone-glow--blue"></div>
+            <img src="images/screenshots/mobile/mobile 5.png" alt="Storemate app create order screen with product selection" class="ma-phone-img" />
+          </div>
+
+          <div class="ma-reveal ma-d2">
+            <div class="ma-feature-step">03</div>
+            <div class="ma-eyebrow">Create Orders</div>
+            <h3 class="ma-feature-h3">Take an order anywhere,<br><strong>in seconds</strong></h3>
+            <p class="ma-feature-desc">
+              Customer calls you at a market, at an event, anywhere? Create a full order directly from your phone. Select products, set quantities, add the customer, all through a guided 3-step flow. No laptop needed.
+            </p>
+            <ul class="ma-feature-bullets">
+              <li><div class="ma-bullet-check">✓</div>3-step flow: Customer → Product → Details</li>
+              <li><div class="ma-bullet-check">✓</div>Browse your full product catalogue on mobile</li>
+              <li><div class="ma-bullet-check">✓</div>SKU, selling price, quantity, unit, all tracked</li>
+              <li><div class="ma-bullet-check">✓</div>Sub-totals calculated automatically</li>
+              <li><div class="ma-bullet-check">✓</div>Add multiple products to one order</li>
+            </ul>
+            <div class="ma-feature-tag">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              Create orders without a desk
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── FEATURE 4: SYNC HISTORY ───────────────────────────── -->
+    <section class="ma-feature ma-feature--gray">
+      <div class="container">
+        <div class="ma-feature-inner ma-feature-inner--rev">
+
+          <div class="ma-phone-wrap ma-reveal ma-d1">
+            <div class="ma-phone-glow ma-phone-glow--green"></div>
+            <img src="images/screenshots/mobile/mobile 3.png" alt="Storemate app sync history showing courier sync status" class="ma-phone-img" />
+          </div>
+
+          <div class="ma-reveal ma-d2">
+            <div class="ma-feature-step">04</div>
+            <div class="ma-eyebrow">Sync History</div>
+            <h3 class="ma-feature-h3">Watch courier syncs<br><strong>happen in real time</strong></h3>
+            <p class="ma-feature-desc">
+              No need to be at your computer to know if your courier syncs completed. Check the Sync History tab from anywhere, see exactly which bulk syncs succeeded, which are in progress, and if anything needs your attention.
+            </p>
+            <ul class="ma-feature-bullets">
+              <li><div class="ma-bullet-check">✓</div>Full bulk sync history with timestamps</li>
+              <li><div class="ma-bullet-check">✓</div>Live progress shown per sync, 40%, 75%, 100%</li>
+              <li><div class="ma-bullet-check">✓</div>Sync Successful / In Progress / Sync Failed status</li>
+              <li><div class="ma-bullet-check">✓</div>Tap any entry to see full sync details</li>
+              <li><div class="ma-bullet-check">✓</div>Act on failures immediately, no missed syncs</li>
+            </ul>
+            <div class="ma-feature-tag">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 102.13-9.36L1 10"/></svg>
+              Never miss a failed sync
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── DOWNLOAD CTA ───────────────────────────────────────── -->
+    <section class="ma-download" id="ma-download">
+      <div class="container">
+        <h2>Your business is<br>waiting in your <em>pocket.</em><br><strong>Download free today.</strong></h2>
+        <p>Free for all Storemate subscribers. Available on iOS and Android. Set up in minutes.</p>
+        <div class="ma-download-btns">
+
+          <a href="https://play.google.com/store/apps/details?id=com.parallaxTechnologies.storemateOMS" target="_blank" rel="noopener noreferrer" class="app-store-badge">
+            <img src="images/screenshots/google-play.svg" alt="Get Storemate OMS on Google Play" />
+          </a>
+
+          <a href="https://apps.apple.com/lk/app/storemate-oms/id6756418519" target="_blank" rel="noopener noreferrer" class="app-store-badge">
+            <img src="images/screenshots/appstore.svg" alt="Download Storemate OMS on the App Store" />
+          </a>
+
+        </div>
+        <p class="ma-download-note">Already a Storemate subscriber? The app is included in your plan, no extra cost.</p>
+        <div class="ma-qr-hint">
+          <span class="ma-qr-hint-line"></span>
+          <span>Free for all Storemate plans &nbsp;·&nbsp; iOS &amp; Android &nbsp;·&nbsp; Setup in minutes</span>
+          <span class="ma-qr-hint-line"></span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="ft-orb ft-orb--1" aria-hidden="true"></div>
+    <div class="ft-orb ft-orb--2" aria-hidden="true"></div>
+    <div class="ft-orb ft-orb--3" aria-hidden="true"></div>
+
+    <div class="ft-main">
+      <div class="container">
+        <div class="ft-grid">
+
+          <div class="ft-brand-col ft-reveal ft-reveal-d1">
+            <img src="images/brand/storemate_logo.png" alt="Storemate" class="ft-logo-img" />
+            <p class="ft-tagline">From seller to Entrepreneur.</p>
+            <p class="ft-mission">Built from the experience of 25M orders and 30,000+ sellers. Built for sellers who are building something real.</p>
+            <div class="ft-social">
+              <a href="https://www.facebook.com/storemateonline" class="ft-social-link" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+              <a href="https://www.instagram.com/storemate_oms/" class="ft-social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+              <a href="https://www.youtube.com/@Storemate" class="ft-social-link" aria-label="YouTube" target="_blank" rel="noopener noreferrer"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 001.46 6.42 29 29 0 001 12a29 29 0 00.46 5.58 2.78 2.78 0 001.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.96A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon fill="white" points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg></a>
+              <a href="https://www.linkedin.com/showcase/storemate-oms-system" class="ft-social-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+              <a href="https://www.tiktok.com/@storemate_" class="ft-social-link" aria-label="TikTok" target="_blank" rel="noopener noreferrer">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.91a8.17 8.17 0 004.77 1.52V7a4.85 4.85 0 01-1-.31z"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="ft-reveal ft-reveal-d2">
+            <h4 class="ft-col-heading">Product</h4>
+            <ul class="ft-link-list">
+              <li><a href="index.html#features">Features</a></li>
+              <li><a href="why-storemate.html">Why Storemate</a></li>
+              <li><a href="whatsapp-landing.html">Self-Order Form</a></li>
+              <li><a href="returns-landing.html">Reduce Returns</a></li>
+              <li><a href="waybill-landing.html">Waybill Printing</a></li>
+              <li><a href="courier-sync.html">Courier Sync</a></li>
+              <li><a href="mobile-app.html">Mobile App</a></li>
+            </ul>
+          </div>
+
+          <div class="ft-reveal ft-reveal-d3">
+            <h4 class="ft-col-heading">Company</h4>
+            <ul class="ft-link-list">
+              <li><a href="about.html">About Us</a>
+        <a href="trackmate.html">Trackmate</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="ft-reveal ft-reveal-d4">
+            <h4 class="ft-col-heading">Legal</h4>
+            <ul class="ft-link-list">
+              <li><a href="privacy.html">Privacy Policy</a></li>
+              <li><a href="terms.html">Terms of Service</a></li>
+              <li><a href="security.html">Data Security</a></li>
+              <li><a href="security.html">ISO 27001</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="ft-bottom">
+      <div class="container">
+        <div class="ft-bottom-inner">
+          <p class="ft-copyright">&copy; <span class="ft-year"></span> Parallax Technologies (Pvt) Ltd. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      (function() {
+        document.querySelector('.ft-year').textContent = new Date().getFullYear();
+        var footer = document.querySelector('.site-footer');
+        if (!footer) return;
+        var obs = new IntersectionObserver(function(entries) {
+          entries.forEach(function(e) { if (e.isIntersecting) e.target.classList.add('ft-visible'); });
+        }, { threshold: 0.08 });
+        footer.querySelectorAll('.ft-reveal').forEach(function(el) { obs.observe(el); });
+      })();
+    </script>
+  </footer>
+
+  <script>
+    (function() {
+      var obs = new IntersectionObserver(function(entries) {
+        entries.forEach(function(e) { if (e.isIntersecting) e.target.classList.add('ma-visible'); });
+      }, { threshold: 0.1 });
+      document.querySelectorAll('.ma-reveal').forEach(function(el) { obs.observe(el); });
+    })();
+  </script>
+  <script src="js/nav.js"></script>
+  <script src="js/cookie-consent.js"></script>
+  <script src="js/whatsapp-widget.js"></script>
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "MobileApplication",
+  "name": "Storemate Mobile App",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "iOS, Android",
+  "url": "https://storemate.lk/mobile-app",
+  "description": "Manage orders, track deliveries, create new orders, and watch your live sales dashboard from anywhere in Sri Lanka. Free for all Storemate users.",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "LKR"
+  },
+  "downloadUrl": [
+    "https://play.google.com/store/apps/details?id=com.parallaxTechnologies.storemateOMS",
+    "https://apps.apple.com/lk/app/storemate-oms/id6756418519"
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Storemate",
+    "url": "https://storemate.lk"
+  }
+}
+  </script>
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://storemate.lk"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Mobile App",
+      "item": "https://storemate.lk/mobile-app"
+    }
+  ]
+}
+  </script>
+</body>
+</html>
